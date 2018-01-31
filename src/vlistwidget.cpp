@@ -171,9 +171,10 @@ void VListWidget::refresh()
     }
 }
 
-void VListWidget::clear()
+void VListWidget::clearAll()
 {
     QListWidget::clear();
+
     m_hitCount = 0;
     m_hitItems.clear();
     m_isInSearch = false;

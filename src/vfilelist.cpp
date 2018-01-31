@@ -202,7 +202,7 @@ void VFileList::setDirectory(VDirectory *p_directory)
     // be NULL.
     if (m_directory == p_directory) {
         if (!m_directory) {
-            fileList->clear();
+            fileList->clearAll();
         }
 
         return;
@@ -210,7 +210,7 @@ void VFileList::setDirectory(VDirectory *p_directory)
 
     m_directory = p_directory;
     if (!m_directory) {
-        fileList->clear();
+        fileList->clearAll();
         return;
     }
 
@@ -219,7 +219,7 @@ void VFileList::setDirectory(VDirectory *p_directory)
 
 void VFileList::updateFileList()
 {
-    fileList->clear();
+    fileList->clearAll();
     if (!m_directory->open()) {
         return;
     }

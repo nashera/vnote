@@ -106,8 +106,9 @@ public:
 
     void refresh();
 
-public slots:
-    void clear();
+    // Clear list widget as well as other data.
+    // clear() is not virtual to override.
+    void clearAll();
 
 private slots:
     void handleSearchKeyChanged(const QString& updatedText);
@@ -117,7 +118,9 @@ protected:
 
 private:
     QLabel *m_label;
+
     VLineEdit* m_searchKey;
+
     bool m_isInSearch;
 
     VItemDelegate* m_delegateObj;
